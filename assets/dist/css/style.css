@@ -2475,8 +2475,8 @@ body {
   -moz-border-radius: none;
   -ms-border-radius: none;
   border: none;
-  border-radius: 1px solid var(--clr-secondary-silver-grey);
   border-radius: 0.25rem;
+  border: 1px solid var(--clr-secondary-silver-grey);
   padding: 0.65rem;
   font-size: var(--fs-100);
   color: var(--clr-primary-light-grey);
