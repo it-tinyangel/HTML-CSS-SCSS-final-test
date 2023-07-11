@@ -1,0 +1,221 @@
+@use "colors" as *;
+@use "type" as *;
+@use "sizes" as *;
+@use "sass:math";
+
+$color-text-default: $color-primary-2;
+$color-text-complemet: $color-neutral;
+$color-background-default: $color-neutral;
+
+// spacing
+$padding-base: $size-1;
+$margin-base: $size-1;
+
+// borders
+$border-thin-thickness: 1px;
+$border-base-thickness: 2px;
+$border-bold-thickness: 3px;
+$border-radius-1: $size-1;
+$border-radius-2: $size-6;
+$border-radius-cyrcle: 50%;
+
+// body
+$body-font-family: $font-family-base;
+$body-font-weight-base: $font-weight-default;
+
+$body-font-size: $font-size-200;
+$body-text-transform-default: none;
+$body-text-transform-uppercase: uppercase;
+$body-letter-spacing: normal;
+$body-line-height: normal;
+
+$body-text-color: $color-text-default;
+
+$body-background-color: $color-background-default;
+
+$link-text-decoration: none;
+
+// heading
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+$heading-font-size: $font-size-700;
+$heading-text-transform: $body-text-transform-default;
+$heading-letter-spacing: $body-letter-spacing;
+$heading-line-height: $body-line-height;
+$heading-text-color: $color-primary-1;
+
+// main heading/hero section/header section
+$main-heading-font-size: $font-size-900;
+$main-heading-text-transform: uppercase;
+$main-heading-text-color: $color-text-complemet;
+
+// main paragraph/hero section/header section
+$main-paragraph-font-weight: $font-weight-thin;
+$main-paragraph-font-size: $font-size-400;
+$main-paragraph-line-height: 24.5px;
+$main-paragraph-text-color: $color-text-complemet;
+
+// main button/hero section/header section
+$main-button-padding: $padding-base * 2.4 $padding-base * 12;
+
+// nav logo-link/nav section/header section
+$nav-logo-font-size: $font-size-500;
+$nav-logo-text-transform: uppercase;
+$nav-logo-text-color: $color-text-complemet;
+$nav-logo-text-color-hover: $nav-logo-text-color;
+$nav-logo-text-color-visited: $nav-logo-text-color;
+
+// nav buttons/nav section/header section
+$nav-button-font-weight: $body-font-weight-base;
+$nav-button-padding: $padding-base * 1.6 $padding-base * 4;
+
+// card button/card section
+$card-button-font-weight: $body-font-weight-base;
+$card-button-font-size: $font-size-000;
+$card-button-letter-spacing: 0.25em;
+$card-button-padding: $padding-base * 0.6 $padding-base * 2.4;
+
+// card title/card section
+$card-heading-font-size: $font-size-800;
+$card-heading-line-height: 1.1;
+$card-heading-text-color: $color-text-complemet;
+
+// card description/card section
+$card-description-font-weight: $font-weight-thin;
+$card-description-font-size: $font-size-100;
+$card-description-line-height-tight: 0.6;
+$card-description-line-height: 1;
+$card-description-text-color: $color-text-complemet;
+
+// avatar/avatar section
+$avatar-width: 120px;
+$avatar-height: $avatar-width;
+
+$avatar-border-default: 3px solid $color-neutral;
+
+// avatar title/avatar section
+$avatar-heading-font-size: $font-size-100;
+$avatar-heading-text-color: $heading-text-color;
+
+// avatar description/avatar section
+$avatar-description-font-weight: $font-weight-thin;
+$avatar-description-font-size: $font-size-100;
+$avatar-description-line-height: 1.1;
+$avatar-description-text-color: $body-text-color;
+
+// gallery heading/gallery section
+$gallery-heading-font-size: $font-size-600;
+$gallery-heading-text-color: $color-text-complemet;
+$gallery-heading-text-color-hover: $gallery-heading-text-color;
+$gallery-heading-text-color-visited: $gallery-heading-text-color;
+
+// form/form section
+$form-input-font-size: $font-size-100;
+$form-input-text-color: $color-primary-3;
+$form-input-color-placeholder: $color-secondary-1;
+
+$form-input-background-color: $color-text-complemet;
+$form-input-background-color-focus: $form-input-background-color;
+
+$form-input-padding: $padding-base * 2.6;
+$form-input-border-default: 1px solid $color-secondary-1;
+$form-input-border-focus: 2px solid $color-primary-3;
+
+// footer line/footer section
+$footer-line-text-color: $color-accent;
+
+// footer logo-link/footer section
+$footer-logo-link-font-weight: $body-font-weight-base;
+$footer-logo-link-font-size: $font-size-200;
+$footer-logo-link-text-color: $color-accent;
+$footer-logo-link-text-color-hover: $footer-logo-link-text-color;
+
+// footer heading/footer section
+$footer-heading-font-family: $heading-font-family;
+$footer-heading-font-size: $font-size-100;
+
+// footer nav-link/footer section
+$footer-nav-link-font-family: $body-font-family;
+$footer-nav-link-font-weight: $font-weight-thin;
+$footer-nav-link-font-size: $font-size-100;
+$footer-nav-link-text-decoration: $link-text-decoration;
+$footer-nav-link-color: $color-primary-2;
+$footer-nav-link-color-hover: $color-primary-3;
+$footer-nav-link-color-visited: $footer-nav-link-color;
+
+// footer logo-img/footer section
+$footer-logo-img-font-size: $font-size-000;
+$footer-logo-img-text-transform: uppercase;
+$footer-logo-img-letter-spacing: 0.1em;
+$footer-logo-img-text-color: $color-secondary-2;
+
+// buttons
+$button-border-radius: $border-radius-2;
+
+$button-padding-base: $padding-base * 2.4 $padding-base * 5;
+$button-padding-medium: $padding-base * 2.4 $padding-base * 17;
+$button-padding-large: $padding-base * 2.4 $padding-base * 20;
+
+$button-font-family: $font-family-accent;
+$button-font-weight: $font-weight-bold;
+$button-font-weight-thin: $font-weight-thin;
+$button-font-size: $font-size-100;
+$button-text-decoration: $link-text-decoration;
+$button-color: $color-neutral;
+
+// images border-radius
+$image-border-radius: $border-radius-1;
+
+// images paths for header section
+$imgdir-head-mobile: "../../img/Background_mobile.png";
+$imgdir-head-tablet: "../../img/Background_tablet.png";
+$imgdir-head-desctop: "../../img/Background_desktop.png";
+// end images paths for header section
+
+// images paths for card sectoin
+$imgdir-step-one-mobile: "../../img/Step_1_mobile.png";
+$imgdir-step-one-tablet: "../../img/Step_1_tablet.png";
+$imgdir-step-one-desctop: "../../img/Step_1_desktop.png";
+$imgdir-step-two-mobile: "../../img/Step_2_mobile.png";
+$imgdir-step-two-tablet: "../../img/Step_2_tablet.png";
+$imgdir-step-two-desctop: "../../img/Step_2_desktop.png";
+$imgdir-step-three-mobile: "../../img/Step_3_mobile.png";
+$imgdir-step-three-tablet: "../../img/Step_3_tablet.png";
+$imgdir-step-three-desctop: "../../img/Step_3_desktop.png";
+// end images paths for card sectoin
+
+// images paths for avatar sectoin
+$svgdir-avatar-1: "../../img/svg/music-solid.svg";
+$svgdir-avatar-3: "../../img/svg/paintbrush-solid.svg";
+$svgdir-avatar-2: "../../img/svg/camera-solid.svg";
+$svgdir-avatar-4: "../../img/svg/plane-solid.svg";
+// end images paths for avatar sectoin
+
+// images paths for gallery sectoin
+$imgdir-gallery-1-mobile: "../../img/gallery_Sport_mobile.png";
+$imgdir-gallery-1-tablet: "../../img/gallery_Sport_tablet.png";
+$imgdir-gallery-1-desctop: "../../img/gallery_Sport_desktop.png";
+$imgdir-gallery-2-mobile: "../../img/gallery_Healath_mobile.png";
+$imgdir-gallery-2-tablet: "../../img/gallery_Healath_tablet.png";
+$imgdir-gallery-2-desctop: "../../img/gallery_Healath_desktop.png";
+$imgdir-gallery-3-mobile: "../../img/gallery_Extreme_mobile.png";
+$imgdir-gallery-3-tablet: "../../img/gallery_Extreme_tablet.png";
+$imgdir-gallery-3-desctop: "../../img/gallery_Extreme_desktop.png";
+$imgdir-gallery-4-mobile: "../../img/gallery_Games_mobile.png";
+$imgdir-gallery-4-tablet: "../../img/gallery_Games_tablet.png";
+$imgdir-gallery-4-desctop: "../../img/gallery_Games_desktop.png";
+$imgdir-gallery-5-mobile: "../../img/gallery_Culture_mobile.png";
+$imgdir-gallery-5-tablet: "../../img/gallery_Culture_tablet.png";
+$imgdir-gallery-5-desctop: "../../img/gallery_Culture_desktop.png";
+$imgdir-gallery-6-mobile: "../../img/gallery_Care_mobile.png";
+$imgdir-gallery-6-tablet: "../../img/gallery_Care_tablet.png";
+$imgdir-gallery-6-desctop: "../../img/gallery_Care_desktop.png";
+$imgdir-gallery-7-mobile: "../../img/gallery_Travel_mobile.png";
+$imgdir-gallery-7-tablet: "../../img/gallery_Travel_tablet.png";
+$imgdir-gallery-7-desctop: "../../img/gallery_Travel_desktop.png";
+// end images paths for gallery sectoin
+
+// flex varialables
+$layout-direction-values: row, column, row-reverse, column-reverse;
+$layout-justify-values: center, flex-start, flex-end, space-between, space-around, space-evenly;
+$layout-items-values: center, flex-start, flex-end, stretch, baseline;

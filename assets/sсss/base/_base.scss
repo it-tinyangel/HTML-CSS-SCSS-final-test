@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	background-color: $body-background-color;
+}
+h3 {
+	@include max-media("md-width") {
+		margin: 0 auto;
+		@include grid-unit(4);
+	}
+	.section-gallery & {
+		@include max-media("md-width") {
+			@include grid-unit(3);
+		}
+	}
+}

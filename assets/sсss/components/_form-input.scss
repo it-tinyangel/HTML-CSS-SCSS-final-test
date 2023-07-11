@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+.form {
+	input[type="text"] {
+		width: 100%;
+		width: 280px;
+		@include min-media("md-width") {
+			width: 300px;
+		}
+		box-sizing: border-box;
+		appearance: none;
+		outline: none;
+		@include border($form-input-border-default);
+		border-radius: $border-radius-1;
+		padding: $form-input-padding;
+		font-size: $form-input-font-size;
+		color: $form-input-text-color;
+		background-color: $form-input-background-color;
+		&::placeholder {
+			font-size: $form-input-font-size;
+			color: $form-input-color-placeholder;
+		}
+		cursor: pointer;
+		transition: 0.2s ease;
+		&:is(:hover, :focus) {
+			outline: none;
+			border: $form-input-border-focus;
+			background-color: $form-input-background-color-focus;
+		}
+	}
+	&__btn {
+		@include max-media("md-width") {
+			margin-top: $margin-base * 3;
+			padding: $button-padding-large;
+		}
+		@include min-media("md-width") {
+			padding: $padding-base * 2.4 $padding-base * 6.6;
+		}
+	}
+}

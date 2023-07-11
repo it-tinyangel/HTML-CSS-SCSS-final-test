@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.hero {
+	&__title {
+		font-size: $main-heading-font-size;
+		text-transform: $main-heading-text-transform;
+		color: $main-heading-text-color;
+	}
+	&__desc {
+		font: {
+			weight: $main-paragraph-font-weight;
+			size: $main-paragraph-font-size;
+		}
+		line-height: $main-paragraph-line-height;
+		color: $main-paragraph-text-color;
+	}
+	.nav__btn--base {
+		@include max-media("md-width") {
+			padding: $main-button-padding;
+		}
+	}
+}

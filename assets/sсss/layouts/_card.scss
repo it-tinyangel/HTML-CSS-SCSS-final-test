@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+@use "sass:math";
+/*
+ * Card section 
+ */
+.section-card {
+	height: 853px;
+	@include min-media("md-width") {
+		height: 650px;
+	}
+	@include min-media("lg-width") {
+		height: 645px;
+	}
+	.container {
+		@include grid-unit(4);
+		@include min-media("md-width") {
+			@include grid-unit(9.6);
+		}
+		@include min-media("lg-width") {
+			@include grid-unit(12);
+		}
+		height: auto;
+	}
+	&__title {
+		padding: {
+			top: $padding-base * 9;
+			bottom: $padding-base * 3;
+		}
+		@include min-media("md-width") {
+			padding: {
+				top: $padding-base * 24;
+				bottom: $padding-base * 8;
+			}
+		}
+		@include min-media("lg-width") {
+			padding: {
+				top: $padding-base * 22;
+				bottom: $padding-base * 9;
+			}
+		}
+	}
+	@at-root .card {
+		&__btn {
+			margin-bottom: $margin-base * 11;
+			@include min-media("md-width") {
+				margin-bottom: $margin-base * 11;
+			}
+			@include min-media("lg-width") {
+				margin-bottom: $margin-base * 5;
+			}
+		}
+		&__title {
+			padding-bottom: $padding-base * 6;
+			@include min-media("md-width") {
+				padding-bottom: $padding-base * 7.5;
+			}
+			@include min-media("lg-width") {
+				padding-bottom: $padding-base * 6;
+			}
+		}
+		& :nth-child(2) {
+			.card__btn {
+				margin-bottom: $margin-base * 7;
+				@include min-media("md-width") {
+					margin-bottom: $margin-base * 4;
+				}
+				@include min-media("lg-width") {
+					margin-bottom: $margin-base * 6;
+				}
+			}
+			.card__title {
+				@include min-media("md-width") {
+					padding-bottom: $padding-base * 5.5;
+				}
+				@include min-media("lg-width") {
+					padding-bottom: $padding-base * 4;
+				}
+			}
+		}
+	}
+}

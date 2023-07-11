@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+:root {
+	@each $color, $shade-map in $colors {
+		@each $shade, $value in $shade-map {
+			--clr-#{$color}-#{$shade}: #{$value};
+		}
+	}
+	@each $screen-size, $size-map in $font-sizes {
+		@if $screen-size == "sm-width" {
+			@each $size-name, $size-value in $size-map {
+				--fs-#{$size-name}: #{$size-value};
+			}
+		}
+		@if $screen-size == "md-width" {
+			@include min-media("md-width") {
+				@each $size-name, $size-value in $size-map {
+					--fs-#{$size-name}: #{$size-value};
+				}
+			}
+		}
+		@if $screen-size == "lg-width" {
+			@include min-media("lg-width") {
+				@each $size-name, $size-value in $size-map {
+					--fs-#{$size-name}: #{$size-value};
+				}
+			}
+		}
+	}
+}

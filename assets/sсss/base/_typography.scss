@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+/*
+ * Base typography on a page
+ */
+body,
+p {
+	font: {
+		family: $body-font-family;
+		weight: $body-font-weight-base;
+		size: $body-font-size;
+	}
+	text-transform: $body-text-transform-default;
+	letter-spacing: $body-letter-spacing;
+	line-height: $body-line-height;
+	word-wrap: break-word;
+	color: $body-text-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font: {
+		family: $heading-font-family;
+		weight: $heading-font-weight;
+		size: $heading-font-size;
+	}
+	text-transform: $heading-text-transform;
+	letter-spacing: $heading-letter-spacing;
+	line-height: $heading-line-height;
+	word-wrap: break-word;
+	color: $heading-text-color;
+}
+a {
+	text-decoration: $link-text-decoration;
+}

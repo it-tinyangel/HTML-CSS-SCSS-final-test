@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+@use "sass:math";
+/*
+ * Header 
+ */
+.header {
+	overflow: hidden;
+	height: 540px;
+	@include background-fixed($imgdir-head-mobile);
+	@include min-media("md-width") {
+		height: 700px;
+		@include background-fixed($imgdir-head-tablet);
+	}
+	@include min-media("lg-width") {
+		@include background-fixed($imgdir-head-desctop);
+	}
+	.container {
+		@include grid-unit(4);
+		@include min-media("md-width") {
+			@include grid-unit(8.6);
+		}
+		@include min-media("lg-width") {
+			@include grid-unit(12);
+		}
+		.hero {
+			@include min-media("md-width") {
+				@include grid-unit(8);
+			}
+			.row {
+				flex-direction: column;
+				align-items: center;
+			}
+			&__title {
+				padding-bottom: $padding-base * 2;
+				@include min-media("md-width") {
+					padding-bottom: $padding-base * 7;
+				}
+			}
+			&__desc {
+				@include max-media("md-width") {
+					width: 270px;
+				}
+				padding-bottom: $padding-base * 3;
+				@include min-media("md-width") {
+					padding-bottom: $padding-base * 9;
+				}
+			}
+		}
+	}
+}

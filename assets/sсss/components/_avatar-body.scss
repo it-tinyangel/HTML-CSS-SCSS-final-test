@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+.avatar {
+	@include size(255px, 220px);
+	@include min-media("md-width") {
+		height: 250px;
+	}
+	padding: $padding-base * 2 $padding-base * 3;
+	margin-bottom: $margin-base * 2;
+	&__img {
+		@include size($avatar-width, $avatar-height);
+		display: block;
+		border-radius: $border-radius-cyrcle;
+	}
+	&__title {
+		font-size: $avatar-heading-font-size;
+		color: $avatar-heading-text-color;
+	}
+	&__desc {
+		font: {
+			weight: $avatar-description-font-weight;
+			size: $avatar-description-font-size;
+		}
+		line-height: $avatar-description-line-height;
+		color: $avatar-description-text-color;
+	}
+}

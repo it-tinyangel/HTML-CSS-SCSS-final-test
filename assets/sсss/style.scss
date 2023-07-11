@@ -1,0 +1,22 @@
+@use "base";
+
+// components & layouts
+@use "components/buttons";
+@use "layouts/header";
+@use "components/nav";
+@use "components/hero";
+@use "layouts/card";
+@use "components/card-img";
+@use "components/card-body";
+@use "layouts/avatar";
+@use "components/avatar-body";
+@use "components/avatar-icon";
+@use "layouts/gallery";
+@use "components/gallery-img";
+@use "components/gallery-body";
+@use "layouts/form";
+@use "components/form-input";
+@use "layouts/footer";
+
+//  utilites (text-align)
+@use "utilities/text-align";
