@@ -11,8 +11,8 @@
 		box-sizing: border-box;
 		appearance: none;
 		outline: none;
-		@include border($form-input-border-default);
-		border-radius: $border-radius-1;
+		@include border($border-radius-1);
+		border: $form-input-border-default;
 		padding: $form-input-padding;
 		font-size: $form-input-font-size;
 		color: $form-input-text-color;
