@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.gallery {
+	&__title {
+		font-size: $gallery-heading-font-size;
+		color: $gallery-heading-text-color;
+		transition: 0.3s ease;
+		&:is(:hover, :focus) {
+			color: $gallery-heading-text-color-hover;
+			transform: scale(1.03);
+		}
+		&:is(:visited) {
+			color: $gallery-heading-text-color-visited;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+@use "sass:math";
+/*
+ * Text-alignes classes
+ */
+$text-align: (
+	"text-align": (
+		"prefix": "text",
+		"values": (
+			"left": left,
+			"right": right,
+			"center": center,
+			"justify": justify
+		)
+	)
+);
+// generate utilites classes
+@each $property, $map in $text-align {
+	$prefix: map-get($map, $key: "prefix");
+	$values: map-get($map, $key: "values");
+
+	@each $key, $value in $values {
+		@if ($key == "default") {
+			.#{$prefix} {
+				#{$property}: $value;
+			}
+		} @else {
+			.#{$prefix}-#{$key} {
+				#{$property}: $value;
+			}
+		}
+	}
+}

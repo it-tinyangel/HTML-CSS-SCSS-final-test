@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/dist/css/style.css">
+	<title>Lesson11. Framework Bootstrap, Sass & CSS GRID</title>
+</head>
+
+<body>
+
+	<header class="header container">
+		<div class="row">
+			<div class="container">
+				<!-- navigation -->
+				<nav class="nav">
+					<div class="row">
+						<a href="#">
+							<h2 class="nav__logo">DREAMSHARE</h2>
+						</a>
+						<div class="nav__btn">
+							<a href="#"><button class="nav__btn--base button-light" type="button">Log in</button></a>
+							<a href="#"><button class="nav__btn--base button-light" type="button">Sign up</button></a>
+						</div>
+					</div>
+				</nav>
+				<!-- hero -->
+				<section class="hero container text-center">
+					<div class="row">
+						<h1 class="hero__title">SHARE YOUR HOLIDAY DREAM</h1>
+						<p class="hero__desc">And find the perfect partner to fullfill it</p>
+						<a href="#">
+							<button class="button-coral" type="button"><strong>Find your holiday partner</strong></button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="section-card container">
+			<h3 class="section-card__title text-center"><strong>How Dreamshare works?</strong></h3>
+			<div class="card container">
+				<!-- card -->
+				<div class="card__img card__img--1">
+					<a target="_blank" href="#"><button class="card__btn button-coral" type="button">STEP 1</button></a>
+					<h4 class="card__title">Sed leo enim, condimentum</h4>
+					<p class="card__desc" class="card-text mb-auto">Quisque libero libero, dictum non turpis in, luctus
+						semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+				</div>
+				<!-- card -->
+				<div class="card__img card__img--2">
+					<a target="_blank" href="#"><button class="card__btn button-coral" type="button">STEP 2</button></a>
+					<h4 class="card__title">Morbi velit risus</h4>
+					<p class="card__desc" class="card-text mb-auto">Nulla venenatis tempor dui in molestie. Nulla quis
+						dictum purus, sit amet porttitor est.</p>
+				</div>
+				<!-- card -->
+				<div class="card__img card__img--3">
+					<a target="_blank" href="#"><button class="card__btn button-coral" type="button">STEP 2</button></a>
+					<h4 class="card__title">Sed leo enim, condimentum</h4>
+					<p class="card__desc" class="card-text mb-auto">Quisque libero libero, dictum non turpis in, luctus
+						semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-avatar text-center">
+			<h3 class="section-avatar__title text-center">Meet a partner for your best holiday</h3>
+			<div class="container">
+				<div class="row justify-content-md-space-between">
+					<!-- avatar -->
+					<div class="col col-md-6 col-lg-3">
+						<div class="row">
+							<div class="avatar">
+								<div class="row flex-direction-column">
+									<a target="_blank" href="#"><img class="avatar__img" src="assets/img/Avatar_1.png"
+											alt="Partner Bradley Hunter for your best holiday"></a>
+									<div class="avatar__icon avatar__icon-1"></div>
+									<a target="_blank" href="#">
+										<h4 class="avatar__title">Bradley Hunter</h4>
+									</a>
+									<p class="avatar__desc">Based in Chicago. I love playing tennis and loud music.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- avatar -->
+					<div class="col col-md-6 col-lg-3">
+						<div class="row">
+							<div class="avatar">
+								<div class="row flex-direction-column">
+									<a target="_blank" href="#"><img class="avatar__img" src="assets/img/Avatar_2.png"
+											alt="Partner Marie Bennett for your best holiday"></a>
+									<div class="avatar__icon avatar__icon-2"></div>
+									<a target="_blank" href="#">
+										<h4 class="avatar__title">Diana Wells</h4>
+									</a>
+									<p class="avatar__desc">Living in Athens, Greece. I love black and white classics, chillout music
+										and green tea.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- avatar -->
+					<div class="col col-md-6 col-lg-3">
+						<div class="row">
+							<div class="avatar">
+								<div class="row flex-direction-column">
+									<a target="_blank" href="#"><img class="avatar__img" src="assets/img/Avatar_3.png"
+											alt="Partner Diana Wells for your best holiday"></a>
+									<div class="avatar__icon avatar__icon-3"></div>
+									<a target="_blank" href="#">
+										<h4 class="avatar__title">Marie Bennett</h4>
+									</a>
+									<p class="avatar__desc">Currently living in Colorado. Lover of art, languages and travelling.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- avatar -->
+					<div class="col col-md-6 col-lg-3">
+						<div class="row">
+							<div class="avatar">
+								<div class="row flex-direction-column">
+									<a target="_blank" href="#"><img class="avatar__img avatar__img--icon-4" src="assets/img/Avatar_4.png"
+											alt="Partner Christopher Pierce for your best holiday"></a>
+									<div class="avatar__icon avatar__icon-4"></div>
+									<a target="_blank" href="#">
+										<h4 class="avatar__title">Christopher Pierce</h4>
+									</a>
+									<p class="avatar__desc">Star Wars fanatic. I have a persistent enthusiasm to create new things.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a target="_blank" href="#">
+				<button class="section-avatar__btn button-outline-coral" type="button">See other partners</button>
+			</a>
+		</section>
+
+		<section class="section-gallery container text-center">
+			<h3 class="section-gallery__title text-center">Discover holiday activity ideas</h3>
+			<div class="gallery container">
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--1">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Sports and Activis</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--2">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Wellness and Health</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--3">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Extreme Sports and Expeditions</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--4">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Games</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--5">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Culture and Education</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--6">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Enjomet and Relaxation</h4>
+					</a>
+				</div>
+				<!-- gallery-->
+				<div class="gallery__img gallery__img--7">
+					<a target="_blank" href="#">
+						<h4 class="gallery__title text-light">Trevelling</h4>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="form container text-center">
+			<h3 class="form__title text-center">Crate your holiday activity</h3>
+			<p class="form__desc text-center">Hi! What are your holiday interests?</p>
+			<div class="container">
+				<div class="row align-items-center justify-content-md-space-between">
+					<!-- form -->
+					<form name="form__input" action="#.php" target="_blank" method="post" autocomplete="on"
+						accept-charset="UTF-8">
+						<input type="text" name="form__input" id="form__input" placeholder="Enter your interests" minlength="4"
+							maxlength="50">
+					</form>
+					<a target="_blank" href="#">
+						<button class="form__btn button-coral" type="button">Search partners</button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer text-center">
+		<hr class="footer-line" noshade>
+		<div class="container">
+			<div class="row align-items-flex-start justify-content-space-between">
+				<div class="col col-md-4 col-lg-3">
+					<div class="row justify-content-center justify-content-md-flex-start">
+						<a href="#">
+							<h3 class="footer-name text-coral">DREAMSHARE</h3>
+						</a>
+					</div>
+				</div>
+				<div class="col col-md-3 col-lg-3">
+					<div class="footer-company">
+						<div
+							class="row align-items-center justify-content-center flex-direction-md-column align-items-md-flex-start">
+							<h4 class="footer__title">Company</h4>
+						</div>
+						<nav
+							class="row align-items-center justify-content-center flex-direction-md-column align-items-md-flex-start">
+							<a class="footer-company__item" href="#">About</a>
+							<a class="footer-company__item" href="#">Contact</a>
+							<a class="footer-company__item" href="#">Press</a>
+							<a class="footer-company__item" href="#">Blog</a>
+							<a class="footer-company__item" href="#">Terms and Privacy</a>
+							<a class="footer-company__item" href="#">Help</a>
+						</nav>
+					</div>
+				</div>
+				<div class="col col-md-3 col-lg-4">
+					<div class="footer-partners">
+						<div
+							class="row align-items-center justify-content-center flex-direction-md-column align-items-md-flex-start">
+							<h4 class="footer__title">Partners</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col col-md-2">
+					<div class="footer-logo">
+						<div class="row align-items-center justify-content-center flex-direction-md-column align-items-md-flex-end">
+							<div class="col">
+								<h4 class="footer-logo__title">DESIGNED BY</h4>
+							</div>
+							<div class="col">
+								<div class="row justify-content-center">
+									<img class="footer-logo__img" src="assets/img/Logo_Areto_Development.png"
+										alt="Logotype Areto Development">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

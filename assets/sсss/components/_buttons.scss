@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+@use "sass:color";
+/*
+ * Buttons
+ */
+@mixin button($val) {
+	padding: $button-padding-base;
+	display: inline-block;
+	border: none;
+	border-radius: $button-border-radius;
+	font: {
+		family: $button-font-family;
+		weight: $button-font-weight;
+		size: $button-font-size;
+	}
+	text-decoration: $button-text-decoration;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+@mixin button-hover($val) {
+	&:is(:hover, :focus) {
+		transform: scale(1.03);
+		@content;
+	}
+}
+// generate buttons white & coral colors
+@each $color, $values in $colors {
+	@if ($color == "button") {
+		@each $val, $value in $values {
+			.button-#{$val} {
+				@include button($val);
+				color: $button-color;
+				@if ($value == $white) {
+					background-color: transparent;
+					@include button-hover($value) {
+						border: $border-base-thickness solid $value;
+					}
+				} @else {
+					background-color: $value;
+					border: $border-base-thickness solid $value;
+					@include button-hover($value) {
+						background-color: darken($value, 2%);
+						border: $border-base-thickness solid darken($value, 2%);
+					}
+				}
+			}
+		}
+	}
+}
+// generate transparent buttons
+@each $color, $values in $colors {
+	@if ($color == "button") {
+		@each $val, $value in $values {
+			.button-outline-#{$val} {
+				@if ($value != $white) {
+					@include button($val);
+					background-color: transparent;
+					color: $value;
+					border: $border-base-thickness solid $value;
+					@include button-hover($val);
+				}
+			}
+		}
+	}
+}

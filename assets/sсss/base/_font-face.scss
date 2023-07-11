@@ -1,0 +1,31 @@
+/*
+ * Fonts with which to display text on page
+ */
+@font-face {
+	font-family: "Montserrat";
+	src: url("../../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+	font-weight: normal;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+	font-weight: lighter;
+	font-weight: 300;
+	font-style: normal;
+}

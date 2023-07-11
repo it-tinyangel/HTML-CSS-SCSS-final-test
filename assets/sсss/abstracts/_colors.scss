@@ -1,0 +1,50 @@
+// theme colors
+$dark-gray: #444444;
+$classic-gray: #666666;
+$light-gray: #999999;
+$steel-gray: #cccccc;
+$silver-gray: #d4d4d4;
+$white: #ffffff;
+$bermuda-coral: #ff4e50;
+$turquoise: #19d4ca;
+$orange: #ffa710;
+$mauve: #667df3;
+
+$colors: (
+	"primary": (
+		"dark-grey": $dark-gray,
+		"grey": $classic-gray,
+		"light-grey": $light-gray,
+		"coral": $bermuda-coral,
+		"light": $white
+	),
+	"secondary": (
+		"silver-grey": $silver-gray,
+		"steel-grey": $steel-gray
+	),
+	"icon": (
+		"coral": $bermuda-coral,
+		"turquoise": $turquoise,
+		"orange": $orange,
+		"mauve": $mauve
+	),
+	"button": (
+		"coral": $bermuda-coral,
+		"light": $white
+	)
+);
+
+// contextual color varialables
+$color-neutral: var(--clr-primary-light);
+$color-accent: var(--clr-primary-coral);
+$color-primary-1: var(--clr-primary-dark-grey);
+$color-primary-2: var(--clr-primary-grey);
+$color-primary-3: var(--clr-primary-light-grey);
+$color-secondary-1: var(--clr-secondary-silver-grey);
+$color-secondary-2: var(--clr-secondary-steel-grey);
+$color-accessory-1: var(--clr-icon-coral);
+$color-accessory-2: var(--clr-icon-turquoise);
+$color-accessory-3: var(--clr-icon-orange);
+$color-accessory-4: var(--clr-icon-mauve);
+$color-extra-1: var(--clr-button-coral);
+$color-extra-2: var(--clr-button-light);

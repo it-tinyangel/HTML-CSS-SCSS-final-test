@@ -1,0 +1,89 @@
+@use "../abstracts/" as *;
+@use "sass:math";
+/*
+ * Base layout classes
+ */
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.container,
+.row {
+	float: none;
+	@extend %clearfix;
+}
+.row {
+	margin: 0 auto;
+	@extend %flex-container;
+}
+[class*="col-"] {
+	float: left;
+	width: 100%;
+	min-height: 1px;
+}
+// generate flex-direction classes
+@each $val in $layout-direction-values {
+	.flex-direction-#{$val} {
+		flex-direction: $val;
+	}
+}
+// generate justify content classes
+@each $val in $layout-justify-values {
+	.justify-content-#{$val} {
+		justify-content: $val;
+	}
+}
+// generate align items classes
+@each $val in $layout-items-values {
+	.align-items-#{$val} {
+		align-items: $val;
+	}
+}
+// generate col classes
+@for $i from 1 through $grid-columns {
+	.col {
+		flex: 1 1 100%;
+	}
+}
+@include min-media("md-width") {
+	@for $i from 1 through $grid-columns {
+		// generate flex-direction classes
+		@each $val in $layout-direction-values {
+			.flex-direction-md-#{$val} {
+				flex-direction: $val;
+			}
+		}
+		// generate justify content classes
+		@each $val in $layout-justify-values {
+			.justify-content-md-#{$val} {
+				justify-content: $val;
+			}
+		}
+		// generate align items classes
+		@each $val in $layout-items-values {
+			.align-items-md-#{$val} {
+				align-items: $val;
+			}
+		}
+		// generate col classes
+		.col-md-#{$i} {
+			box-sizing: border-box;
+			flex-grow: 0;
+			flex-basis: math.div($i * 100%, $grid-columns);
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+@include min-media("lg-width") {
+	@for $i from 1 through $grid-columns {
+		// generate col classes
+		.col-lg-#{$i} {
+			box-sizing: border-box;
+			flex-grow: 0;
+			flex-basis: math.div($i * 100%, $grid-columns);
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}

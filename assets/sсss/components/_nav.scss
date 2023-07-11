@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+.nav {
+	padding-top: $padding-base * 6;
+	padding-bottom: $padding-base * 6;
+	@include min-media("md-width") {
+		padding-top: $padding-base * 11;
+		padding-bottom: $padding-base * 37;
+	}
+	.row {
+		@include max-media("md-width") {
+			flex-direction: column-reverse;
+		}
+	}
+	a {
+		flex: 1 0 auto;
+	}
+	&__logo {
+		@include max-media("md-width") {
+			text-align: center;
+		}
+		font-size: $nav-logo-font-size;
+		text-transform: $nav-logo-text-transform;
+		color: $nav-logo-text-color;
+		&:is(:hover, :focus) {
+			color: $nav-logo-text-color-hover;
+		}
+		&:is(:visited) {
+			color: $nav-logo-text-color-visited;
+		}
+	}
+	&__btn {
+		@include max-media("md-width") {
+			padding-bottom: $padding-base * 25;
+		}
+		&--base {
+			margin: 0 $margin-base * 1;
+			padding: $nav-button-padding;
+			font-weight: $nav-button-font-weight;
+		}
+	}
+}
