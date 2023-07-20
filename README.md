@@ -1,4 +1,6 @@
-# lesson-12-html-css-final-test
-Lesson 12 — Final test HTML CSS
+# Module 2. HTML, CSS. Lesson-12
 
-The web site is responsive. Using SCSS preprocessor and BEM methodology to name classes. Layout with maximum pixel accuracy. Everything is organized into folders.
+# Final test
+
+The website is responsive. SCSS preprocessor and BEM methodology are used for naming classes.
+Marking with maximum pixel accuracy. Everything is arranged in folders.
