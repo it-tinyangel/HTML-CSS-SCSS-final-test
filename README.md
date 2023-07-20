@@ -1,4 +1,4 @@
-# Module 2. HTML, CSS. Lesson-12
+# Module 2. HTML, CSS. Lesson 12
 
 # Final test
 
